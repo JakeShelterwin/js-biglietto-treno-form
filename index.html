@@ -13,37 +13,62 @@
     <body>
 
       <main>
-        <div id="calcolo">
-          <input id="nome" type="text" name="" value="">
-          <input id="km" type="text" name="" value="">
-          <input id="anni" type="text" name="" value="">
+        <section class="sezioneTop">
+          <div id="calcolo">
+            <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+            <div class="inputUtente">
+              <div class="inputNome">
+                <p>Inserisci il tuo Nome</p>
+                <input id="nome" type="text" name="" value="">
+              </div>
+              <div class="inputKM">
+                <p>Quanti chilometri vuoi percorrere?</p>
+                <input id="km" type="text" name="" value="">
+              </div>
+              <div class="inputAnni">
+                <p>Quanti anni hai?</p>
+                <input id="anni" type="text" name="" value="">
+              </div>
+            </div>
+            <div class="buttoniFunzionali">
+              <button id="genera" type="button" name="button">
+                Genera
+              </button>
 
-          <button id="genera" type="button" name="button">
-            Genera
-          </button>
-
-          <button id="annulla" type="button" name="button">
-            Annulla
-          </button>
-        </div>
+              <button id="annulla" type="button" name="button">
+                Annulla
+              </button>
+            </div>
+          </div>
+        </section>
 
         <div id="risultatoCalcolo">
-          <div>
-            <span id="nomePasseggero">mu</span>
-          </div>
-          <div>
-            <span id="offerta">gr</span>
-          </div>
-          <div>
-            <span id="carrozza"></span>
-          </div>
-          <div>
-            <span id="codiceBiglietto"></span>
-          </div>
-          <div>
-            <span id="costoBiglietto"></span>
+          <h1>DETTAGLIO PASSEGGERI</h1>
+          <div class="containerRisultatoCalcolo">
+            <div class="identitaPasseggero">
+              <p>NOME PASSEGGERO</p>
+              <span id="nomePasseggero"></span>
+            </div>
+            <div>
+              <p>Offerta</p>
+              <span id="offerta"></span>
+            </div>
+            <div>
+              <p>Carrozza</p>
+              <span id="carrozza"></span>
+            </div>
+            <div>
+              <p>Codice Biglietto</p>
+              <span id="codiceBiglietto"></span>
+            </div>
+            <div>
+              <p>Costo Biglietto</p>
+              <span id="costoBiglietto"></span>
+            </div>
+
           </div>
         </div>
+
 
       </main>
       <script type="text/javascript" src="main.js"> </script>

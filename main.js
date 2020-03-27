@@ -10,7 +10,7 @@ var nomeUtente, kmDaFare, anniUtente, nomeUtenteInput, kmDaFareInput, anniUtente
 nomeUtente = document.getElementById('nome');
 // input km utente
 kmDaFare = document.getElementById('km');
-// input età utente
+// input anni utente
 anniUtente = document.getElementById('anni');
 
 // bottoner genera e bottone annulla

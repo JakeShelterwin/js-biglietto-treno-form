@@ -12,25 +12,64 @@
   width: 300px;
 } */
 
+h1 {
+  background-color: #64b5f6;
+  color: #1565c0;
+  margin-left: 5%;
+  margin-right: 5%;
+}
 main {
   height: 100vh;
   background-color: #e3f2fd;
 }
 
+.sezioneTop{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 #calcolo{
+  text-align: center;
+}
+
+.inputUtente{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  width: 100%;
+}
+.inputNome, .inputKM, .inputAnni {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.inputUtente div{
+  width: 15%;
+  height: 100px;
 }
 
 #risultatoCalcolo {
+  display: none;
+}
+.containerRisultatoCalcolo{
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  display: block;
+  justify-content: space-between;
   width: 90%;
   margin-left: 5%;
-  background-color: red;
+  border-top: 1px rgb(185, 20, 80) solid;
+  border-bottom: 1px rgb(185, 20, 80) solid;
   height: 200px;
+}
+
+.identitaPasseggero{
+  background-color: rgb(185, 20, 80);
+  color: white;
+  width: 20%;
+  height: 100%;
+}
+.containerRisultatoCalcolo div{
+  height: 100%;
 }
