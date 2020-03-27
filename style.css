@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* h1 {
+  background-color: #64b5f6;
+  padding: 25px;
+  border: 5px dotted rgba(13, 71, 161, 0.5);
+  color: #1565c0;
+  border-radius: 30px;
+  width: 300px;
+} */
+
+main {
+  height: 100vh;
+  background-color: #e3f2fd;
+}
+
+#calcolo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+#risultatoCalcolo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  display: block;
+  width: 90%;
+  margin-left: 5%;
+  background-color: red;
+  height: 200px;
+}
