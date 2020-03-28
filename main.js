@@ -22,10 +22,11 @@ bottoneGenera.addEventListener("click",
   function(){
     // sul click salvo i valori degli input
     nomeUtenteInput = nomeUtente.value;
-    kmDaFareInput = kmDaFare.value;
-    anniUtenteInput = anniUtente.value;
+    kmDaFareInput = parseInt(kmDaFare.value);
+    anniUtenteInput = parseInt(anniUtente.value);
 
     // inserisco le condizioni per il calcolo corretto del prezzo dei biglietti
+    // e stampo nel documento il valore trovato in questo modo
     prezzoUnKM=0.21;
     if (anniUtenteInput<18){
       //sconto del 20% perché restituisco l'80% del prezzo del biglietto
@@ -40,8 +41,8 @@ bottoneGenera.addEventListener("click",
       document.getElementById('offerta').innerHTML = 'Biglietto Standard';
     }
 
-    // li stampo in console
-    console.log(nomeUtenteInput, kmDaFareInput, anniUtenteInput, prezzoViaggio);
+    //Debug: li stampo in console
+    console.log(nomeUtenteInput, 'km da fare ' + kmDaFareInput, 'anni ' + anniUtenteInput, 'prezzo ' + prezzoViaggio + '€') ;
 
     //gestisco la casella a scomaprsa
     risultatoCalcolo = document.getElementById("risultatoCalcolo");
@@ -62,18 +63,17 @@ bottoneGenera.addEventListener("click",
 // gestisco gli effetti al click sul bottone annulla
 bottoneAnnulla.addEventListener("click",
   function(){
-
     //svuoto gli elementi input riempiti dall'utente se è cliccato il bottone annulla
     nomeUtente.value = "";
     kmDaFare.value = "";
     anniUtente.value = "";
 
-    //gestisco la casella a scomaprsa
+    //gestisco la casella a scomaprsa che, se è visibile, deve nascondersi quando clicco su annulla
     risultatoCalcolo = document.getElementById("risultatoCalcolo");
     risultatoCalcolo.style.display="none";
 
     // resetto il documento
-    document.getElementById('nomePasseggero').innerHTML ="";
+    document.getElementById('nomePasseggero').innerHTML = "";
     document.getElementById('carrozza').innerHTML = "";
     document.getElementById('codiceBiglietto').innerHTML = "";
     document.getElementById('costoBiglietto').innerHTML = "";

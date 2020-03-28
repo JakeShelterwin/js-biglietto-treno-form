@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- richiamo fontawesome -->
-    <!-- <script src="https://kit.fontawesome.com/15ec4d483d.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"> -->
+    <!-- <script src="https://kit.fontawesome.com/15ec4d483d.js" crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Biglietto Treno</title>
   </head>
@@ -13,16 +13,22 @@
     <body>
 
       <main>
-        <section class="sezioneTop">
+        <!-- barra fissa top -->
+        <div class="navbarTop">
+          <img src="img/logo.png" alt="logo">
+          <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+        </div>
+
+        <!-- sezione input -->
           <div id="calcolo">
-            <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+            <!-- sezione che prende l'input dall'utente -->
             <div class="inputUtente">
               <div class="inputNome">
                 <p>Inserisci il tuo Nome</p>
                 <input id="nome" type="text" name="" value="">
               </div>
               <div class="inputKM">
-                <p>Quanti chilometri vuoi percorrere?</p>
+                <p>Quanti km devi fare?</p>
                 <input id="km" type="text" name="" value="">
               </div>
               <div class="inputAnni">
@@ -30,7 +36,8 @@
                 <input id="anni" type="text" name="" value="">
               </div>
             </div>
-            <div class="buttoniFunzionali">
+            <!-- sezione con i bottoni -->
+            <div class="bottoniFunzionali">
               <button id="genera" type="button" name="button">
                 Genera
               </button>
@@ -40,37 +47,49 @@
               </button>
             </div>
           </div>
-        </section>
 
+        <!-- sezione calcolo prezzo -->
         <div id="risultatoCalcolo">
-          <h1>DETTAGLIO PASSEGGERI</h1>
-          <div class="containerRisultatoCalcolo">
-            <div class="identitaPasseggero">
-              <p>NOME PASSEGGERO</p>
-              <span id="nomePasseggero"></span>
+          <h1>DETTAGLIO PASSEGGERO</h1>
+          <div class="containerRisultatoCalcolo clearfix">
+            <div>
+              <p>COSTO BIGLIETTO</p>
+              <span id="costoBiglietto"></span>
             </div>
             <div>
-              <p>Offerta</p>
-              <span id="offerta"></span>
-            </div>
-            <div>
-              <p>Carrozza</p>
-              <span id="carrozza"></span>
-            </div>
-            <div>
-              <p>Codice Biglietto</p>
+              <p>CODICE BIGLIETTO</p>
               <span id="codiceBiglietto"></span>
             </div>
             <div>
-              <p>Costo Biglietto</p>
-              <span id="costoBiglietto"></span>
+              <p>CARROZZA</p>
+              <span id="carrozza"></span>
             </div>
-
+            <div>
+              <p>OFFERTA</p>
+              <span id="offerta"></span>
+            </div>
+            <div>
+              <p class="bordoFinestra">NOME PASSEGGERO</p>
+              <span id="nomePasseggero"></span>
+            </div>
           </div>
         </div>
-
-
       </main>
+      <!-- footer -->
+      <footer>
+        <div>
+          <h1>98%</h1>
+          <p>La percentuale di chi ha usato <span>booleanTravel</span> ora viaggia solo con noi, oltre la metà con abbonamento perpetuo.</p>
+        </div>
+        <div>
+          <h1>23.000&prime;</h1>
+          <p>I minuti medi per viaggiatore <span>booleanTravel</span> trascorsi nelle nostre cabine treno.</p>
+        </div>
+        <div>
+          <h1>#1</h1>
+          <p>Siamo il primo istituto di viaggi in Italia per indice di gradimento e risultati conseguiti.</p>
+        </div>
+      </footer>
       <script type="text/javascript" src="main.js"> </script>
     </body>
 

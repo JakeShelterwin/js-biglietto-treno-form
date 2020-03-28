@@ -3,73 +3,191 @@
   margin: 0;
   box-sizing: border-box;
 }
-/* h1 {
-  background-color: #64b5f6;
-  padding: 25px;
-  border: 5px dotted rgba(13, 71, 161, 0.5);
-  color: #1565c0;
-  border-radius: 30px;
-  width: 300px;
-} */
+/* ************************************************************************* */
+/* ******************************ROBE GENERALI****************************** */
+/* ************************************************************************* */
 
-h1 {
-  background-color: #64b5f6;
-  color: #1565c0;
-  margin-left: 5%;
-  margin-right: 5%;
+body {
+  font-family: 'Rubik', sans-serif;
 }
+
+.clearfix {
+  display: table;
+  content: "";
+  clear: both;
+}
+
 main {
-  height: 100vh;
+  height: calc(100vh - 300px);  /* 300 è barrafixed + altezza fissa footer*/
   background-color: #e3f2fd;
 }
 
-.sezioneTop{
+/* ************************************************************************* */
+/* ******************************NAVBAR FISSA TOP****************************** */
+/* ************************************************************************* */
+.navbarTop{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(226, 241, 252, 0.5);
+}
+
+.navbarTop img{
+  height: 60px;
   margin-left: 5%;
+}
+
+.navbarTop h1 {
+  color: #1b3c59;
+  font-size: 30px;
   margin-right: 5%;
 }
 
+/* ************************************************************************* */
+/* ******************************SEZIONE INPUT****************************** */
+/* ************************************************************************* */
 #calcolo{
   text-align: center;
+  margin-top: 80px;
 }
 
+/* gestione degli input presi dall'utente */
 .inputUtente{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-}
-.inputNome, .inputKM, .inputAnni {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.inputUtente div{
-  width: 15%;
-  height: 100px;
+  width: 70%;
+  margin-left: 15%;
 }
 
+.inputUtente div{
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.inputUtente p{
+  font-size: 19px;
+}
+
+/* gestisco le caratteristiche dei campi input */
+.inputUtente input{
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px rgba(27, 60, 89, 0.25) solid;
+  font-size: 19px;
+  background-color: white;
+}
+
+/* imposto la dimensione di questi div */
+.inputNome, .inputKM, .inputAnni {
+  width: 100%;
+}
+
+/* gestisco l'aspetto dei bottoni */
+.bottoniFunzionali button {
+    padding: 10px 85px;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    border: none;
+    background-color: #61ce4e;
+    margin: 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+/* ************************************************************************* */
+/* ***************************  SEZIONE CALCOLO PREZZO ********************* */
+/* ************************************************************************* */
 #risultatoCalcolo {
   display: none;
+  margin-top: 40px;
+  text-align: center;
+  border-bottom: 20px rgba(0, 0, 0, 0.6) double; /*questi sono i binari :D */
 }
+
+#risultatoCalcolo h1 {
+  color: #1b3c59;
+  margin-bottom: 5px;
+}
+
+/* questa classe crea l'illusione di un treno */
 .containerRisultatoCalcolo{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 90%;
   margin-left: 5%;
-  border-top: 1px rgb(185, 20, 80) solid;
-  border-bottom: 1px rgb(185, 20, 80) solid;
+  background-color: #1b3c59;
+  border-top: 6px rgba(0, 0, 0, 0.15) solid;
+  border-bottom: 6px rgba(0, 0, 0, 0.3) solid;
+  border-left: 6px #61ce4e solid;
+  border-right: 6px #61ce4e solid;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 20px;
   height: 200px;
 }
 
-.identitaPasseggero{
-  background-color: rgb(185, 20, 80);
+/* questa classe gestisce i p e aggiunge un bordo ad essi  */
+.containerRisultatoCalcolo p {
   color: white;
-  width: 20%;
-  height: 100%;
+  font-size: 21px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 10px solid #275f91;
 }
+
+/* il bordo aggiunto dalla classe precedente, modificato nel il primo p, da l'impressione di curvatura tipica dei treni */
+.containerRisultatoCalcolo .bordoFinestra{
+  border-bottom-left-radius: 33px;
+}
+
+.containerRisultatoCalcolo span{
+  display: inline-block; /*così posso dare margin agli span*/
+  color: white;
+  font-size: 21px;
+  margin-top: 53px;
+}
+
+/* do a ogni div contenuto in .containerRisultatoCalcolo float right così non sforano la testa del treno */
 .containerRisultatoCalcolo div{
+  float: right;
   height: 100%;
+  width: 19%;
+}
+
+/* ************************************************************************* */
+/* ***************************** FOOTER ************************************ */
+/* ************************************************************************* */
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 220px;
+  background-color: #1b3c59;
+  overflow: hidden;
+  color: white;
+}
+
+footer div {
+  text-align: center;
+  width: 20%;
+}
+
+footer h1{
+  font-size: 45px;
+}
+
+footer p{
+  font-size: 19px;
+}
+
+footer p span{
+  color: #61ce4e;
 }
